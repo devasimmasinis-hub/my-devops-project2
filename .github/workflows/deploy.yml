@@ -3,7 +3,7 @@ name: "Terraform Action"
 on:
   push:
     branches:
-      - master  # Unga terminal-la 'master' nu irunthathaal ingeyum master kuduthuruken
+      - main  # Unga terminal-la 'master' nu irunthathaal ingeyum master kuduthuruken
 
 jobs:
   terraform:
