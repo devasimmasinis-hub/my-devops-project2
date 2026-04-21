@@ -1,24 +1,21 @@
 terraform {
   required_providers {
-    docker = {
-      source  = "kreuzwerker/docker"
-      version = "~> 3.0.1"
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
     }
   }
 }
 
-provider "docker" {}
-
-resource "docker_image" "nginx" {
-  name         = "nginx:latest"
-  keep_locally = false
+provider "aws" {
+  region = "us-east-1" 
 }
 
-resource "docker_container" "elango_auto_server" {
-  image = docker_image.nginx.image_id
-  name  = "elango_auto_server"
-  ports {
-    internal = 80
-    external = 8080
+resource "aws_instance" "elango_cloud_server" {
+  ami           = "ami-0e2c8ccd4e022c147" # Ubuntu 22.04 LTS
+  instance_type = "t2.micro"             # Free Tier
+  
+  tags = {
+    Name = "Elango-Success-Server"
   }
 }
