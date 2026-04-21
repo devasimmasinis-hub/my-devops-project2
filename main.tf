@@ -12,7 +12,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "elango_cloud_server" {
-  ami           = "ami-0e2c8ccd4e022c147" # Ubuntu 22.04 LTS
+  ami           = ami = "ami-04b70fa74e45c3917" # Updated Ubuntu 24.04 ID for us-east-1
   instance_type = "t2.micro"             # Free Tier
   
   tags = {
