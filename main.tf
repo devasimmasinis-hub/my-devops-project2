@@ -16,6 +16,6 @@ resource "aws_instance" "elango_cloud_server" {
   instance_type = "t2.micro"
 
   tags = {
-    Name = "deva-final-Server"
+    Name = -final-Server"
   }
 }
