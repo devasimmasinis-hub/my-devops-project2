@@ -8,14 +8,14 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1" 
+  region = "us-east-1"
 }
 
 resource "aws_instance" "elango_cloud_server" {
-  ami           = ami = "ami-04b70fa74e45c3917" # Updated Ubuntu 24.04 ID for us-east-1
-  instance_type = "t2.micro"             # Free Tier
-  
+  ami           = "ami-04b70fa74e45c3917" 
+  instance_type = "t2.micro"
+
   tags = {
-    Name ="deva-final-Server"
+    Name = "deva-final-Server"
   }
 }
