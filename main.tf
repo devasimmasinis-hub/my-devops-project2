@@ -16,6 +16,6 @@ resource "aws_instance" "elango_cloud_server" {
   instance_type = "t2.micro"             # Free Tier
   
   tags = {
-    Name = "Elango-Success-Server"
+    Name ="deva-final-Server"
   }
 }
